@@ -1,0 +1,24 @@
+<h1>Top 10 juego más vendidos de siempre</h1>
+<table class="table table-striped mt-3">
+  <thead>
+      <tr>
+    <td>Codigo</td>
+    <td>Título</td>
+    <td>Ventas</td>
+    <td>Plataforma</td>
+    <td>Fecha de lanzamiento</td>
+    <td>Desarrolladora</td>
+</tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let juego of datos">
+        <td>{{juego.codigo}}</td>
+        <td>{{juego.titulo}}</td>
+        <td>{{juego.ventas}}</td>
+        <td>{{juego.plataforma}}</td>
+        <td>{{juego.fechaLanzamiento}}</td>
+        <td>{{juego.desarrollador}}</td>
+      </tr>
+  </tbody>
+</table>

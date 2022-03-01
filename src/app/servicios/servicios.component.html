@@ -1,0 +1,20 @@
+<h1 class="card-title">Gifs en tendencia de <a href="https://developers.giphy.com/docs/api#quick-start-guide">Giphy</a></h1>
+<h1 class="card-header text-muted mb-2 fs-5">Las cuentas verificadas le pone un icono azul al lado del nombre</h1>
+<div *ngIf="gifs!=null; else espera">
+  {{testLog(gifs['data'][0])}}
+  <div class="card-group p-6">
+    <tr *ngFor="let gif of gifs['data']">
+      <div class="card m-3" style="width: 18rem;">
+        <a href="{{gif.url}}" ><img class="card-img-top" src="{{gif.images.original.url}}" alt="Card image cap"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{gif.title}}</h5>
+          <p class="card-text">{{gif.username}}</p>
+          <div class="card-footer text-muted mb-2">
+            {{gif.username}} <i class='{{gif | verificado}}' style='color:#0001ff'></i>
+          </div>
+          <a href="{{gif.url}}" class="btn btn-primary">Descargar</a>
+        </div>
+      </div>
+  </div>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>

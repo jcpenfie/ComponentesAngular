@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GifsService } from './gifs.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practicaAngular';
+  opciones = [
+    ['Servicios', 'servicio'], ['Pipe', 'pipes'], ['PropertyBinding', 'probin'], ['Evento', 'evento'], ['Formulario', 'formulario']
+  ];
+
+  ngOnInit() {
+  }
+
 }

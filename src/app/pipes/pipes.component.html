@@ -1,0 +1,16 @@
+<h1>Fichas de empleados con Pipes nativas</h1>
+<div class="card m-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="assets/perfil.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{nombre | titlecase}}</h5>
+        <p class="card-text">Sueldo: {{sueldo | currency: '€' }}</p>
+        <p class="card-text">Rendimiento: {{rendimiento | percent: '2.1-2'  }}</p>
+        <p class="card-text"><small class="text-muted">Nacimiento: {{nacimiento | date}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
