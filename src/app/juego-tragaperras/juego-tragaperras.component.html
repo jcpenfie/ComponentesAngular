@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="juego-tragaperras.component.css">
+<h1>Juegos recreativos Ruiz Gijon</h1>
+<div class="maquinas">
+  <app-tragaperras [credito]="50" (premio)="mensajes($event)"></app-tragaperras>
+  <app-tragaperras [credito]="70" (premio)="mensajes($event)"></app-tragaperras>
+  <app-tragaperras [credito]="120" (premio)="mensajes($event)"></app-tragaperras>
+</div>
+<div class="invisible alert alert-success text-center" role="alert" id="alerta">
+  {{mensaje}}
+</div>

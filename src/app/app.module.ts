@@ -11,6 +11,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { ListadoJuegosComponent } from './listado-juegos/listado-juegos.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
+import { JuegoTragaperrasComponent } from './juego-tragaperras/juego-tragaperras.component';
+import { TragaperrasComponent } from './tragaperras/tragaperras.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormularioReactivoComponent } from './formulario-reactivo/formulario-re
     PipesComponent,
     JuegosComponent,
     ListadoJuegosComponent,
-    FormularioReactivoComponent
+    FormularioReactivoComponent,
+    JuegoTragaperrasComponent,
+    TragaperrasComponent
   ],
   imports: [
     BrowserModule,

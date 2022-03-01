@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="tragaperras.component.css">
+<div class="credito p-1">
+  <p>Crédito: {{credito | currency:'€'}}</p>
+</div>
+<div class="slots">
+  <img src="assets/imagenes/{{valor1}}.png" alt="">
+  <img src="assets/imagenes/{{valor2}}.png" alt="">
+  <img src="assets/imagenes/{{valor3}}.png" alt="">
+</div>
+<div class="boton">
+  <button class="btn btn-danger" (click)="jugar()">¡Jugar!</button>
+</div>

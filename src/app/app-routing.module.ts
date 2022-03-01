@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
+import { JuegoTragaperrasComponent } from './juego-tragaperras/juego-tragaperras.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -21,11 +23,11 @@ const routes: Routes = [
 },
 {
   path: 'evento',
-  component:ServiciosComponent
+  component:JuegoTragaperrasComponent
 },
 {
   path: 'formulario',
-  component:ServiciosComponent
+  component:FormularioReactivoComponent
 }
 ];
 
