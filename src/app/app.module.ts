@@ -13,6 +13,7 @@ import { ListadoJuegosComponent } from './listado-juegos/listado-juegos.componen
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
 import { JuegoTragaperrasComponent } from './juego-tragaperras/juego-tragaperras.component';
 import { TragaperrasComponent } from './tragaperras/tragaperras.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TragaperrasComponent } from './tragaperras/tragaperras.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

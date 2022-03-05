@@ -1,1 +1,53 @@
-<p>formulario-reactivo works!</p>
+<div class="container">
+  <form id="contactus" [formGroup]="formularioContacto" (ngSubmit)="submit()">
+    <h3>Contactanos</h3>
+    <fieldset>
+      <p>
+        <input placeholder="Nombre" type="text" formControlName="nombre" required />
+        <span style="color: red" *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
+          (El nombre no puede quedar vacío)
+        </span>
+        <span style="color: red" *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">
+          (Debe tener como mínimo 10 caracteres)
+        </span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <p>
+        <input placeholder="Mail" type="text" formControlName="mail" />
+        <span style="color: red" *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
+          (El mail no puede quedar vacío)
+        </span>
+        <span style="color: red" *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
+          (El mail no es válido)
+        </span>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <p>
+        <input placeholder="Número" type="text" formControlName="numero" />
+        <span style="color: red;" *ngIf="this.formularioContacto.get('numero')?.errors?.['required']">
+          (El número de télefono no puede quedar vacío)
+        </span>
+        <span style="color: red;" *ngIf="this.formularioContacto.get('numero')?.errors?.['numTel']">
+          (El número de télefono no es válido)
+        </span>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <p>
+        <textarea placeholder="Mensaje" rows="10" cols="70" formControlName="mensaje"></textarea>
+      </p>
+      <div style="color: red" *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
+        (El mensaje no puede quedar vacío)
+      </div>
+      <div style="color: red" *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">
+        (Debe tener como máximo 500 caracteres)
+      </div>
+    </fieldset>
+    <button type="submit">Confirmar</button>
+    <div id="resultado">{{ resultado }}</div>
+  </form>
+</div>

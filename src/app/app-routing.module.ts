@@ -9,26 +9,30 @@ import { ServiciosComponent } from './servicios/servicios.component';
 
 
 const routes: Routes = [
-{
-  path: 'servicio',
-  component:ServiciosComponent
-},
-{
-  path: 'pipes',
-  component:PipesComponent
-},
-{
-  path: 'probin',
-  component:JuegosComponent
-},
-{
-  path: 'evento',
-  component:JuegoTragaperrasComponent
-},
-{
-  path: 'formulario',
-  component:FormularioReactivoComponent
-}
+  {
+    path: '',
+    component: ServiciosComponent
+  },
+  {
+    path: 'servicio',
+    component: ServiciosComponent
+  },
+  {
+    path: 'pipes',
+    component: PipesComponent
+  },
+  {
+    path: 'probin',
+    component: JuegosComponent
+  },
+  {
+    path: 'evento',
+    component: JuegoTragaperrasComponent
+  },
+  {
+    path: 'formulario',
+    component: FormularioReactivoComponent
+  }
 ];
 
 @NgModule({
